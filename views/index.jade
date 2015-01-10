@@ -1,0 +1,219 @@
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='Michaël Soetaert & Kirsten Declercq')
+    link(href='/css/bootstrap.css', rel='stylesheet', media='screen')
+    link(href='/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='/css/font-awesome.min.css', rel='stylesheet', media='screen')
+    link(href='/css/style.css', rel='stylesheet', media='screen')
+
+
+
+
+body#page-top.index
+    // Navigation
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+
+            span.icon-bar
+
+            span.icon-bar
+
+            span.icon-bar
+
+          a.navbar-brand(href='#page-top')
+            img(src='/images/title.png')
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+              li.hidden
+                  a(href='#page-top')
+              if (!user)
+                  li
+                    a(href="/register")
+                        | Register
+                  li
+                    a(href="/login")
+                        | Login
+              if (user)
+                  li
+                    a(href="/logout")
+                        | Logout
+
+    // Header
+    header
+      .container
+        .row
+          .col-lg-12
+            canvas#Game(height='600', width='800')
+            div#data
+                .col-lg-4
+                  if(user)
+                      span#username #{user.username}
+                  if(!user)
+                      div#notloggedin Log in to have your score saved!
+                .col-lg-4
+                    span#geolocation
+
+                .col-lg-4
+                    span#players.players
+    section#shizzle
+      .container
+        .row
+          .col-lg-12
+              #accordion.panel-group(role='tablist', aria-multiselectable='false')
+                .panel.panel-default
+                    #headingOne.panel-heading(role='tab')
+                        h4.panel-title
+                            a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                                | How to?
+                    #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                        .panel-body
+                                #arrow.col-sm-4
+                                    img(src='/images/arrowkeys.png')
+                                    p Use the arrow keys to move around.
+                                #mummy.col-sm-4
+                                    img(src='/images/mummy.png')
+                                    p Jump on top of the enemies to kill them, before they kill you! And don't fall down, or you'll have to start over!
+                                #coin.col-sm-4
+                                    img(src='/images/coinGold.png')
+                                    p Collect as many coins as you can, and better do it fast to, because that's how you get the highest score!
+                .panel.panel-default
+                    #headingTwo.panel-heading(role='tab')
+                        h4.panel-title
+                            a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                                | Chat
+                    #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                        .panel-body
+                                    div#chatdiv
+                                        div#chatmessages
+                                            ul#messages
+                                        form#chatform
+                                            .col-lg-10
+                                                input#m(autocomplete='off')
+                                            .col-lg-2
+                                                button.btn.btn-default Send
+                .panel.panel-default
+                    #headingThree.panel-heading(role='tab')
+                        h4.panel-title
+                            a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                                | Highscores
+                    #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+                        .panel-body
+                            table
+                              tr
+                                  th
+                                      h3 Level 1
+                                  th
+                                      h3 Level 2
+                                  th
+                                      h3 Level 3
+                              tr
+                                  td
+                                      ul
+                                        each score, i in level1
+                                          li #{score.username}: #{score.score}
+                                  td
+                                      ul
+                                        each score, i in level2
+                                          li #{score.username}: #{score.score}
+                                  td
+                                      ul
+                                        each score, i in level3
+                                          li #{score.username}: #{score.score}
+                              tr
+                                  th
+                                      h3 Level 4
+                                  th
+                                      h3 Level 5
+                                  th
+                                      h3 Level 6
+                              tr
+                                  td
+                                      ul
+                                        each score, i in level4
+                                          li #{score.username}: #{score.score}
+                                  td
+                                      ul
+                                        each score, i in level5
+                                          li #{score.username}: #{score.score}
+                                  td
+                                      ul
+                                        each score, i in level6
+                                          li #{score.username}: #{score.score}
+
+                .panel.panel-default
+                    #headingFour.panel-heading(role='tab')
+                        h4.panel-title
+                            a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                                | Trailer
+                    #collapseFour.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFour')
+                        .panel-body
+                            | Coming soon...
+
+
+    // Footer
+    footer.text-center
+      .footer-above
+        .container
+          .row
+            .footer-col.col-md-4
+            .footer-col.col-md-4
+            .footer-col.col-md-4
+      .footer-below
+        .container
+          .row
+            .col-lg-12
+               Copyright &copy; Michaël Soetaert & Kirsten Declercq
+    .scroll-top.page-scroll.visible-xs.visble-sm
+      a.btn.btn-primary(href='#page-top')
+        i.fa.fa-chevron-up
+
+
+    //jQuery
+    script(src='http://code.jquery.com/jquery.js')
+
+    //Bootstrap
+    script(src='/js/bootstrap/bootstrap.min.js')
+
+    //Quintus
+    script(src='/js/quintus/quintus.js')
+    script(src='/js/quintus/quintus_sprites.js')
+    script(src='/js/quintus/quintus_scenes.js')
+    script(src='/js/quintus/quintus_input.js')
+    script(src='/js/quintus/quintus_anim.js')
+    script(src='/js/quintus/quintus_2d.js')
+    script(src='/js/quintus/quintus_touch.js')
+    script(src='/js/quintus/quintus_ui.js')
+    script(src='/js/quintus/quintus_tmx.js')
+    script(src='/js/quintus/quintus_audio.js')
+
+    //Pace
+    script(src='js/pace/pace.min.js')
+
+    //socket.io
+    script(src='socket.io/socket.io.js')
+    script(src='https://maps.googleapis.com/maps/api/js?v=3.exp')
+    script.
+      var socket = io();
+
+    //require
+    script(src='/js/require/require.min.js')
+
+    //chat
+    script(src='/js/chat/chat.js')
+
+    //geolocation
+    script(src='/js/geolocation/geolocation.js')
+
+    //game
+    script(src='/js/game/player.js')
+    script(src='/js/game/enemy.js')
+    script(src='/js/game/game.js')
