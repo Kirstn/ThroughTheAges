@@ -23,7 +23,7 @@ window.addEventListener("load",function() {
     //players
     require(['/socket.io/socket.io.js']);
     var players = [];
-    var socket = io.connect('http://localhost:1337');
+    var socket = io.connect('http://localhost:5000');
     var UiPlayers = document.getElementById("players");
     var selfId, player, startx = 100, starty, tempPlayer, previousLevelUpdate;
 
