@@ -1,0 +1,8 @@
+{
+  "player1":{"sx":0,"sy":0,"cols":12,"tilew":45,"tileh":70,"frames":12},
+  "player2":{"sx":0,"sy":70,"cols":12,"tilew":45,"tileh":70,"frames":12},
+  "player3":{"sx":0,"sy":140,"cols":12,"tilew":45,"tileh":70,"frames":12},
+  "player4":{"sx":0,"sy":210,"cols":12,"tilew":45,"tileh":70,"frames":12},
+  "player5":{"sx":0,"sy":280,"cols":12,"tilew":45,"tileh":70,"frames":12},
+  "player6":{"sx":0,"sy":350,"cols":12,"tilew":45,"tileh":70,"frames":12}
+}

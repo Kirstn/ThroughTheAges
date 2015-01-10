@@ -1,0 +1,9 @@
+{
+  "gold-coin":{"sx":10,"sy":10,"cols":1,"tilew":50,"frames":1,"tileh":50},
+  "endgame-top":{"sx":70,"sy":0,"cols":1,"tilew":70,"frames":1,"tileh":70},
+  "endgame-bottom":{"sx":140,"sy":0,"cols":1,"tilew":70,"frames":1,"tileh":70},
+  "laser-blue":{"sx":210,"sy":26,"cols":1,"tilew":70,"frames":1,"tileh":44},
+  "laser-green":{"sx":280,"sy":26,"cols":1,"tilew":70,"frames":1,"tileh":44},
+  "laser-red":{"sx":350,"sy":26,"cols":1,"tilew":70,"frames":1,"tileh":44},
+  "laser-yellow":{"sx":420,"sy":26,"cols":1,"tilew":70,"frames":1,"tileh":44}
+}

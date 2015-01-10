@@ -1,0 +1,32 @@
+BACKUP RESTOREN
+
+1. open cmd & navigeer naar MongoDB map
+	cd C:\Program Files\MongoDB 2.6 Standard\bin
+
+2. start mongod op
+	mongod
+
+3. Pak dump.rar uit ergens op HD (niet te ver, anders is pad te lang)
+	C:\Database in mijn geval
+
+4. Open 2de cmd (Admin) & navigeer naar MongoDB map
+	cd C:\Program Files\MongoDB 2.6 Standard\bin
+
+5. start mongorestore op met pad naar backup als parameter
+	mongorestore C:\Database\dump\UsersDB
+
+6. DB zou moeten gerestored zijn
+	(kan je controleren met Robomongo & kijken ofdat usersDB er tussen staat)
+
+
+BEVAT 3 TESTUSERS:
+
+Login: TestUser
+PW: test
+
+Login: TestUser2
+PW: test
+
+Login: TestUser3
+PW: test
+

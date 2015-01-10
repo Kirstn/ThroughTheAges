@@ -1,0 +1,19 @@
+{
+  "g_enemy1-lv1":{"sx":0,"sy":0,"cols":11,"tilew":45,"frames":11,"tileh":70},
+  "g_enemy2-lv1":{"sx":0,"sy":440,"cols":11,"tilew":70,"frames":11,"tileh":50},
+  "g_enemy1-lv2":{"sx":0,"sy":70,"cols":11,"tilew":45,"frames":11,"tileh":70},
+  "g_enemy2-lv2":{"sx":0,"sy":510,"cols":11,"tilew":70,"frames":11,"tileh":50},
+  "v_enemy1-lv2":{"sx":0,"sy":860,"cols":3,"tilew":70,"frames":3,"tileh":50},
+  "g_enemy1-lv3":{"sx":0,"sy":140,"cols":11,"tilew":45,"frames":11,"tileh":70},
+  "g_enemy2-lv3":{"sx":0,"sy":580,"cols":11,"tilew":70,"frames":11,"tileh":50},
+  "v_enemy1-lv3":{"sx":0,"sy":930,"cols":3,"tilew":70,"frames":3,"tileh":50},
+  "g_enemy1-lv4":{"sx":0,"sy":210,"cols":11,"tilew":45,"frames":11,"tileh":70},
+  "g_enemy2-lv4":{"sx":0,"sy":650,"cols":11,"tilew":70,"frames":11,"tileh":50},
+  "v_enemy1-lv4":{"sx":0,"sy":1000,"cols":3,"tilew":70,"frames":3,"tileh":50},
+  "g_enemy1-lv5":{"sx":0,"sy":280,"cols":11,"tilew":45,"frames":11,"tileh":70},
+  "g_enemy2-lv5":{"sx":0,"sy":720,"cols":11,"tilew":70,"frames":11,"tileh":50},
+  "v_enemy1-lv5":{"sx":0,"sy":1070,"cols":3,"tilew":70,"frames":3,"tileh":50},
+  "g_enemy1-lv6":{"sx":0,"sy":350,"cols":11,"tilew":45,"frames":11,"tileh":70},
+  "g_enemy2-lv6":{"sx":0,"sy":790,"cols":11,"tilew":70,"frames":11,"tileh":50},
+  "v_enemy1-lv6":{"sx":0,"sy":1140,"cols":3,"tilew":70,"frames":3,"tileh":50}
+}
